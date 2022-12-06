@@ -1,0 +1,87 @@
+.header-none{
+    margin : 0 80px;
+}
+.search {
+  height: 70px;
+  width: 60%;
+  margin: 25px auto;
+  background-color: white;
+  position: relative;
+  border: 5px solid rgb(26, 148, 255);
+  border-radius: 100px;
+}
+.wrap_search {
+  height: 100%;
+}
+.input-search {
+  max-width: 90%;
+  width: 75%;
+  margin-left: 30px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 22px;
+}
+.icon_search {
+  background-color: rgb(26, 148, 255);
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
+  color: white;
+  right: 5%;
+}
+.menu {
+  width: 95%;
+  margin: 1% auto;
+  height: 60px;
+  background-color: rgb(26, 148, 255);
+
+  border-radius: 5px;
+}
+.menu .left {
+  width: 25%;
+  height: 50px;
+  background-color: white;
+  color: rgb(26, 148, 255);
+  text-align: center;
+  float: left;
+}
+.header-menu-left {
+  background-color: white;
+  height: 60px;
+  border: 10px double rgb(26, 148, 255);
+  cursor: pointer;
+  line-height: 40px;
+  font-size: 2rem;
+}
+
+.menu .right {
+  width: 75%;
+  height: 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+.menu .right li {
+  padding: 0 2%;
+  color: white;
+  line-height: 65px;
+  display: inline-block;
+}
+.menu .right a {
+  display: inline-block;
+  padding: 0px 11px;
+  color: white;
+  text-decoration: none;
+  line-height: 50px;
+}
+.img-product{
+    width: 100%;
+    height : 350px;
+
+.card{
+   display:block;
+}
