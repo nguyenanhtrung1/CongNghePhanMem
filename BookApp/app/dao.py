@@ -1,4 +1,4 @@
-from app.models import Category, Product, User, Receipt, ReceiptDetails
+from app.models import Category, Product, User, Receipt, ReceiptDetails, InfoDetails
 from app import db
 from flask_login import current_user
 from sqlalchemy import func
@@ -42,6 +42,10 @@ def register(name, username, password, avatar):
 def get_user_by_id(user_id):
     return User.query.get(user_id)
 
+def info_details(firs_tname,name,email,phone_number,sex,address):
+    i = InfoDetails(first_name=firs_tname, name=name, email=email,phone_number=phone_number,sex=sex,address=address)
+    db.session.add(i)
+    db.session.commit()
 
 def add_receipt(cart):
     if cart:

@@ -19,6 +19,11 @@ def product_detail(product_id):
     p = dao.get_product_by_id(product_id)
     return render_template('details.html', product=p)
 
+@app.route('/products/<int:product_id>/paynow')
+def paynow(product_id):
+    p = dao.get_product_by_id(product_id)
+    return render_template('pay.html', product=p)
+
 
 @app.route('/register', methods=['get', 'post'])
 def register():
@@ -82,6 +87,20 @@ def login_admin():
 
     return redirect('/admin')
 
+@app.route('/products/<int:product_id>/paynow', methods=['post'])
+def info(product_id):
+    err_message = ''
+    if request.method == 'POST':
+
+        p = dao.get_product_by_id(product_id)
+        try:
+            dao.info_details(firs_tname=request.form['fname'], name=request.form['lname'],email=request.form['email'],
+                     phone_number=request.form['mob'],sex=request.form['job'],address=request.form['ans'])
+
+        except:
+            err_message='Có lỗi xảy ra vui lòng điền thông tin chính xác!'
+
+        return render_template('/pay.html', product=p,err_msg=err_message)
 
 @app.route('/cart')
 def cart():
